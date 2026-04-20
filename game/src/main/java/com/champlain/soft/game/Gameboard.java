@@ -13,6 +13,8 @@ public class Gameboard extends Application {
     private static final int ROWS = 10;
     private static final int COLS = 10;
 
+    private static final int SCENE_WIDTH = 800;
+    private static final int SCENE_HEIGHT = 800;
     enum CellType {
         GRASS, PLAYER, PRINCESS, BOMB, WALL
     }
@@ -31,7 +33,7 @@ public class Gameboard extends Application {
         BorderPane root = new BorderPane();
         root.setCenter(grid);
 
-        Scene scene = new Scene(root, 400,700);
+        Scene scene = new Scene(root, SCENE_HEIGHT,SCENE_WIDTH);
 
         stage.setTitle("Rescue the Princess");
         stage.setScene(scene);
@@ -60,7 +62,7 @@ public class Gameboard extends Application {
             for (int col = 0; col < COLS; col++) {
 
                 StackPane cell = new StackPane();
-                cell.setPrefSize(20, 20);
+                cell.setPrefSize(SCENE_HEIGHT, SCENE_WIDTH);
                 cell.setStyle("-fx-border-color: black; -fx-background-color: beige;");
 
                 Label label = new Label();
