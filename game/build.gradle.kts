@@ -2,7 +2,7 @@ plugins {
     java
     application
     id("org.javamodularity.moduleplugin") version "1.8.15"
-    id("org.openjfx.javafxplugin") version "0.0.13"
+    id("org.openjfx.javafxplugin") version "0.1.0"
     id("org.beryx.jlink") version "2.25.0"
 }
 
@@ -27,15 +27,16 @@ tasks.withType<JavaCompile> {
 
 application {
     mainModule.set("com.champlain.soft.game")
-    mainClass.set("com.champlain.soft.game.HelloApplication")
+    mainClass.set("com.champlain.soft.game.Launcher")
 }
 
 javafx {
     version = "22.0.1"
-    modules = listOf("javafx.controls", "javafx.fxml")
+    modules = listOf("javafx.controls", "javafx.fxml", "javafx.media")
 }
 
 dependencies {
+    implementation("org.openjfx:javafx-media:22.0.1:mac")
     implementation("org.controlsfx:controlsfx:11.2.1")
     implementation("com.dlsc.formsfx:formsfx-core:11.6.0") {
       exclude(group = "org.openjfx")
