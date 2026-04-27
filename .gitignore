@@ -30,3 +30,8 @@ replay_pid*
 
 # OS files
 .DS_Store
+
+
+.gradle/
+build/
+bin/
