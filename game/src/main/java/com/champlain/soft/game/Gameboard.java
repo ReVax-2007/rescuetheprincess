@@ -258,8 +258,8 @@ public class Gameboard extends Application {
         StackPane screen = new StackPane();
         screen.setStyle("-fx-background-color: green;");
 
-        Label message = new Label("YOU RESCUED THE PRINCESS! 👑");
-        message.setStyle("-fx-font-size: 40px; -fx-text-fill: white; -fx-font-weight: bold;");
+        Label message = new Label("YOU RESCUED THE PRINCESS! 👑\n\n\nLives Left: " + lives + "\n\n\nBombs On Board: " + BOMBCOUNT);
+        message.setStyle("-fx-font-size: 52px; -fx-text-fill: white; -fx-font-weight: bold;");
 
         screen.getChildren().add(message);
 
