@@ -27,7 +27,7 @@ public class Gameboard extends Application {
     private static final int IMG_WIDTH = 80;
     private static final int IMG_HEIGHT = 80;
     private final int BOMBCOUNT = rand.nextInt(5,8);
-    private int lives = (int) (BOMBCOUNT/2);
+    private int lives = (BOMBCOUNT/2) + 2;
 
     // Define what can exist in each cell
     enum CellType {
